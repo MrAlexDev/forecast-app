@@ -31,7 +31,7 @@ export interface AxiosError extends Error {
 
 // Унифицированные типы ошибок для обработчика
 export interface ErrorDetails {
-    type: 'network' | 'timeout' | 'auth' | 'ratelimit' | 'notfound' | 'server' | 'unknown'
+    type: 'network' | 'timeout' | 'auth' | 'ratelimit' | 'notfound' | 'server' | 'config' | 'unknown'
     code?: string | number
     message: string
     userMessage: string

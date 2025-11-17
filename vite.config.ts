@@ -5,6 +5,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '')
 
   return {
+    base: '/forecast-app/',
     plugins: [vue()],
     resolve: { alias: { '@': '/src' } },
     server: {
