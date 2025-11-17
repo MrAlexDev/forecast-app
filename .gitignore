@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-projectDescription
+projectDescription.md
 
 # Editor directories and files
 .vscode/*
