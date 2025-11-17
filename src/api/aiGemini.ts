@@ -3,6 +3,11 @@ export type AIAdvice = { en: string; ru: string }
 const MODEL = 'models/gemini-2.5-flash'
 
 export async function requestGeminiAdvice(prompt: string): Promise<AIAdvice> {
+  // Отключаем AI на production (GitHub Pages)
+  if (import.meta.env.PROD) {
+    throw new Error('AI suggestions are not available on GitHub Pages. Please run locally with npm run dev.')
+  }
+
   const body = {
     contents: [
       {
