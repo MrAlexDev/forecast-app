@@ -1,6 +1,6 @@
 export type AIAdvice = { en: string; ru: string }
 
-const MODEL = 'models/gemini-1.5-flash'
+const MODEL = 'models/gemini-2.5-flash'
 
 export async function requestGeminiAdvice(prompt: string): Promise<AIAdvice> {
   const body = {
@@ -62,5 +62,3 @@ export async function requestGeminiAdvice(prompt: string): Promise<AIAdvice> {
     return { en: String(text), ru: '' }
   }
 }
-
-
